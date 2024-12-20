@@ -1,3 +1,4 @@
+/* Resetting basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff; /* Soft light blue background */
     color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -18,12 +22,16 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    transition: opacity 0.5s ease-in-out;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 3rem;
+    color: #4b6a8b; /* Warm, inviting blue */
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
 .interactive-section {
@@ -32,11 +40,72 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.container-wrapper-genially {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+}
+
+.loader-genially {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10%;
+    animation: rotateLoader 1s linear infinite;
+}
+
+@keyframes rotateLoader {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 footer {
     text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #555;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    font-size: 1rem;
     color: #888;
+}
+
+footer p a {
+    color: #4b6a8b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+footer p a:hover {
+    color: #2c3e50;
+}
+
+#weather {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #4b6a8b;
+}
+
+#weather-info {
+    font-weight: 600;
 }
